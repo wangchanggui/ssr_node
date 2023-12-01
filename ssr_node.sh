@@ -86,7 +86,7 @@ install_ssr() {
     python_v2=`python3 -V 2>&1|awk '{print $2}'|awk -F '.' '{print $2}'`
     #python_v3=`python3 -V 2>&1|awk '{print $2}'|awk -F '.' '{print $3}'`
     openssl_v1=`openssl version 2>&1|awk '{print $2}'|awk -F '.' '{print $1}'`
-    wget --no-check-certificate https://wj.mfyun.org/test/shadowsocks-mod230728.tgz -O /tmp/shadowsocks-mod.tgz
+    wget --no-check-certificate https://github.com/wangchanggui/shadowsocks/blob/0c27cce1a2dd5595345b2bc877b156072805bc11/shadowsocks-mod230728.tgz -O /tmp/shadowsocks-mod.tgz
     if [[ $? -ne 0 ]]; then
         echo -e "${red}下载失败，请检查服务器网络${plain}"
         exit 1
